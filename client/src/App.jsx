@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { BrowserRouter, Routes, Route, link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -11,18 +10,15 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <H1>Our Books</H1>
-        <link to="/"> Home</link>
-        <link to="/about"> About</link>
+        <h1>Our Books</h1>
+        <Link to="/"> Home</Link>
+        <Link to="/about"> About</Link>
       </header>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home books={books} setBooks={setBooks} />} />
         <Route path="/about" element={<About />} />
       </Routes>
-
-      <div>Testing testing</div>
-      <BestBooks books={books} setBooks={setBooks} />
     </BrowserRouter>
   );
 }
