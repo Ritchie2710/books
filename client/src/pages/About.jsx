@@ -9,7 +9,7 @@ export default function About() {
       <p>Ritchie</p>
       <a href="https://github.com/Ritchie2710">Git hub</a>
       <p>Rory</p>
-      <a href="unsure">Git hub</a>
+      <a href="https://github.com/windyshepperhenderson/">Git hub</a>
     </>
   );
 }
