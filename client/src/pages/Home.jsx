@@ -3,10 +3,13 @@ import Form from "../components/Form"
 
 export default function Home({ books, setBooks }) {
 	return (
+		<>
+		<section>
+			<Form books={books} setBooks={setBooks}/>
+			</section>
 		<main>
-			<h2>Home</h2>
 				<BestBooks books={books} setBooks={setBooks}/>
-				<Form books={books} setBooks={setBooks}/>
 		</main>
+		</>
 	);
 }
