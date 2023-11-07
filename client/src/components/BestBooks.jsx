@@ -17,7 +17,7 @@ export default function BestBooks({ books, setBooks }) {
       {books
         ? Array.from(books).map((book) => {
             return (
-              <div>
+              <div key={book._id}>
                 <h3>{book.title}</h3>
                 <h4>Description: {book.description}</h4>
                 <h4>Read? {book.status}</h4>
