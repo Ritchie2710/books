@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function BestBooks({ books, setBooks }) {
   async function getBooks() {
@@ -27,17 +27,20 @@ export default function BestBooks({ books, setBooks }) {
   }
   return (
     <>
-      {!(books.title) ? (
+      {!books.title ? (
         Array.from(books).map((book) => {
           return (
             <div className="book" key={book._id}>
-
               <Link to={`/book/${book._id}`}>
-              <h3>{book.title}</h3>
+                <h3>{book.title}</h3>
               </Link>
-              
-              <p><span>Description:</span> {book.description}</p>
-              <p><span>Read?</span> {book.status}</p>
+
+              <p>
+                <span>Description:</span> {book.description}
+              </p>
+              <p>
+                <span>Read?</span> {book.status}
+              </p>
               <button onClick={() => deleteBook(book._id)}>Delete Book</button>
             </div>
           );
