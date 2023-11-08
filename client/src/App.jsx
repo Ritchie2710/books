@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home books={books} setBooks={setBooks} />} />
         <Route path="/about" element={<About />} />
-        <Route path= "/book/:id" element={<Book  />} />
+        <Route path= "/book/:id" element={<Book />} />
       </Routes>
     </BrowserRouter>
   );
