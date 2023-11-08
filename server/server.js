@@ -30,7 +30,10 @@ app.delete("/books/:id", async (request, response) => {
 });
 
 app.put("/books/:id", async (request, response) => {
-  const updatedBook = await Book.findByIdAndUpdate(request.params.id, request.body);
+  const updatedBook = await Book.findByIdAndUpdate(
+    request.params.id,
+    request.body
+  );
   response.json(updatedBook);
 });
 
