@@ -29,4 +29,9 @@ app.delete("/books/:id", async (request, response) => {
   response.json(deletedBook);
 });
 
+app.put("/books/:id", async (request, response) => {
+  const updatedBook = await Book.findByIdAndUpdate(request.params.id, request.body);
+  response.json(updatedBook);
+});
+
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
