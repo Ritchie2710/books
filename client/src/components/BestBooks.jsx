@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function BestBooks({ books, setBooks }) {
   async function getBooks() {
-    const API = `http://localhost:8080/books`;
-    // const API = `https://books-wh5e.onrender.com/books`;
+    const API = `https://books-wh5e.onrender.com/books`;
     const res = await axios.get(API);
     setBooks(res.data);
   }
@@ -17,8 +16,7 @@ export default function BestBooks({ books, setBooks }) {
   async function deleteBook(id) {
     const check = confirm("Are you sure you want to delete?");
     if (check) {
-      const API = `http://localhost:8080/books/${id}`;
-      // const API = `https://books-wh5e.onrender.com/books/${id}`;
+      const API = `https://books-wh5e.onrender.com/books/${id}`;
       await axios.delete(API);
       getBooks();
     } else {
