@@ -24,7 +24,7 @@ export default function Form({ books, setBooks, book, setBook }) {
 
   async function updateBook(event) {
     event.preventDefault();
-    const API = `https://books-wh5e.onrender.com/books/${books._id}`;
+    const API = `https://books-wh5e.onrender.com/books/${book._id}`;
     await axios.put(API, formData);
     setBook(formData);
   }
