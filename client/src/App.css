@@ -42,6 +42,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
+  z-index: 99;
 }
 
 span {
@@ -51,4 +52,9 @@ span {
 button {
   max-width: 100px;
   margin: 0 auto;
+}
+
+#book-img {
+  width: 300px;
+  height: auto;
 }

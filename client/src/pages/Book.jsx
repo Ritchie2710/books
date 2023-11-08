@@ -5,14 +5,14 @@ import Form from "../components/Form";
 
 export default function Book() {
   const params = useParams();
-  const [book, setBook] = useState([]);
+  const [book, setBook] = useState({});
 
   useEffect(() => {
     getBook();
   }, []);
 
   async function getBook() {
-    const API = `http://localhost:8080/books?_id=${params.id}`;
+    const API = `https://books-wh5e.onrender.com/books?_id=${params.id}`;
 
     const res = await axios.get(API);
     setBook(res.data[0]);
@@ -21,10 +21,10 @@ export default function Book() {
   return (
     <>
       <h2>{book.title}</h2>
-      <img src={book.imgUrl} />
+      <img id="book-img"src={book.imgUrl} />
       <p>{book.description}</p>
       <p>{book.status}</p>
-      <Form book={book} setBook={setBook} />
+      {book.title && <Form book={book} setBook={setBook} />}
     </>
   );
 }
