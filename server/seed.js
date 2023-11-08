@@ -114,7 +114,7 @@ async function seed() {
     },
     {
       title: "The Alchemist",
-      imgUrl:"https://m.media-amazon.com/images/I/81ioPZFMeUL._SY522_.jpg"
+      imgUrl:"https://m.media-amazon.com/images/I/81ioPZFMeUL._SY522_.jpg",
       description:
         "Paulo Coelho's novel of a shepherd's journey to find his Personal Legend and fulfill his dreams.",
       status: "Read",
