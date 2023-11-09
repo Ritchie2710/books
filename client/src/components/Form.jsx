@@ -55,7 +55,7 @@ export default function Form({ books, setBooks, book, setBook }) {
         onChange={handleChange}
         value={formData.status}
       />
-      <button>Add book</button>
+      <button>{book?._id ? "Update book" : "Submit book"}</button>
     </form>
   );
 }
