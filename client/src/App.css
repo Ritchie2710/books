@@ -36,7 +36,8 @@ main {
   justify-content: space-around;
 }
 
-.book, .profile {
+.book,
+.profile {
   border: 1px solid black;
   width: 25%;
   height: 550px;
@@ -62,4 +63,10 @@ button {
 #book-img {
   width: 300px;
   height: auto;
+}
+
+h2,
+.welcome {
+  color: black;
+  background-color: white;
 }
